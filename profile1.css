@@ -1,0 +1,236 @@
+:root{
+    --primaryColor: #41004b;
+    --secondaryColor: #ffeeb9;
+    --whiteColor: #fff;
+    --blackColor: #222;
+
+
+}
+
+body{
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+
+.paralax{
+    position: absolute;
+    height: 100%;
+}
+
+.paralax-item{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.p-item1{
+    background: url("imgquiz1/sunset.jpeg")center/cover no-repeat
+}
+
+.p-item3{
+    background: url("imgquiz1/m_3.png") bottom/100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
+.p-item4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10000%;
+    height: 100%;
+    content: '';
+    background: url("imgquiz1/") repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 20s linear infinite;
+}
+
+p.item4::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+    content: '';
+    background: url("imgquiz1/") repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: marquee 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-200vw,0,0);
+    }
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 100vh;
+    
+
+}
+
+.content-header{
+    font-family: sans-serif;
+    color: white;
+    text-align: center !important;
+    text-transform: uppercase;
+    margin-right: -50%;
+}
+
+.content-header h1{
+    font-size: 120px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: -20px;
+    text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868, 
+    -1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868, 
+    0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;
+}
+
+.content-header h2{
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: -20px;
+    text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868, 
+    -1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868, 
+    0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;
+}
+
+.content-main h1{
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868, 
+    -1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868, 
+    0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;
+
+}
+
+.content-main p{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868, 
+    -1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868, 
+    0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;
+    background: rgba(150, 120, 180, 0.5); /* Soft purple color with alpha for transparency */
+      border: 2px solid rgba(150, 120, 180, 1); /* Border color without transparency */
+      border-radius: 10px;
+      padding: 25px;
+      display: inline-block;
+      margin-top: 0;
+}
+
+/*Caraousel part*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    padding-top: 5%;
+    padding-left: 12%;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.content{
+    padding-left: 80%;
+    width: 10000;
+    height: 100000;
+}
